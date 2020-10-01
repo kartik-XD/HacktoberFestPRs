@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>manipulating dom and js events</title>
+</head>
+
+<style>
+	
+	.container{
+		position: absolute;
+		
+	}
+	
+	.container p{
+		position: relative;
+		z-index: 1;
+	}
+	
+	.container form{
+		display: flex;
+		flex-direction: column;
+		height: 400px;
+		width: 100px;
+		position: relative;
+		top: -150px;		
+		z-index: 2;
+		display: none;
+	}
+	
+	
+	</style>
+
+<body>
+	
+	<h1 id="heading">my heading</h1>
+	browser events:
+	click
+	contextmenu
+	mouseover/mouseout
+	mousedown/mousemove
+	mousemove
+	
+	
+	<div class="container">
+	
+	
+	<p class="main" id="para">quis enim laborum consequat ab laboris commodo eu distinguantur praesentibus 
+		quibusdam nostrud relinqueret voluptate comprehenderit sunt labore summis multos 
+		si in philosophari noster relinqueret comprehenderit noster quibusdam irure 
+		instituendarum e exquisitaque fidelissimae sempiternum adipisicing despicationes 
+		fabulas nescius quamquam excepteur adipisicing tempor vidisse cernantur 
+		philosophari fore a comprehenderit quamquam anim nam imitarentur voluptate est 
+		arbitror comprehenderit noster sed legam domesticarum praetermissum mentitum 
+		ingeniis si quorum esse do praetermissum quibusdam consectetur te admodum 
+		laboris amet quo senserit ubi anim exercitation sed instituendarum exquisitaque 
+		ad iis expetendis officia eruditionem graviterque summis varias noster 
+		philosophari veniam illustriora coniunctione se illum eram commodo hic quis</p>
+	
+	<form class="main" id="form">
+		
+		<input placeholder="name" />
+		<input placeholder="no."/>
+	</form>
+	
+	</div>									
+											
+												
+													
+	<button id="btn" type="submit" onclick="login()">login/signup</button>			
+	
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<script >
+
+	
+	
+    function login(){
+		let form= document.getElementById('form');
+		let para= document.getElementById('para');
+		if(form.style.display=='block'){
+			form.style.display='none';
+		}
+		
+		else{
+			form.style.display='block';
+			para.style.opacity="0.5";
+		}
+		
+	}	
+	
+	
+	</script>
