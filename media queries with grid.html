@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>mediaqueries</title>
+</head>
+
+<body>
+	
+	<div class="container">
+		
+		<div class="bdr" id="navbar">
+			<a href="">home-1</a>
+			<a href="">home-2</a>
+			<a href="">home-3</a>
+			<a href="">home-4</a>
+		</div>
+		
+		<div class="bdr" id="section">
+			<h1>this is my heading</h1>
+			
+		</div>
+		
+		<div class="bdr" id="aside">
+			<p>lorem mentitum expetendis proident illum culpa minim fabulas enim proident 
+				consectetur doctrina duis ea fidelissimae eiusmod magna summis minim sempiternum 
+				praesentibus tractavissent sed ea dolore</p>
+			
+		</div>
+		
+		<div class="bdr" id="footer">
+			<h2>kartik sachdeva</h2>
+			
+		</div>
+		
+	</div>			
+										
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+	
+   
+	.container{
+		display: grid;
+		grid-gap: 1rem;
+		
+		grid-template-areas: 
+			'navbar navbar navbar navbar'
+			'section section section aside'
+			'footer footer footer footer';
+		
+		
+	}
+	
+	#navbar{
+		grid-area: navbar;
+		
+	}
+	
+	#section{
+		grid-area: section;
+	}
+	
+	#aside{
+		grid-area: aside;
+		
+	}
+	
+	#footer{
+		grid-area: footer;
+	}
+
+	.bdr{
+		border: 2px solid;
+		background-color: antiquewhite;
+	}
+	
+	@media only screen and (min-width:300px) and (max-width:500px){
+		body{
+			background-color: red;
+		}
+		
+		.container{
+			
+			grid-template-areas: 
+			'navbar navbar navbar navbar'
+			'section section section section'
+			'aside aside aside aside'	
+			'footer footer footer footer';
+		
+		}
+	}
+	
+	
+
+</style>
